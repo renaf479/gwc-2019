@@ -1,0 +1,70 @@
+.Background {
+    position: relative;
+    background: transparent url(./images/bg.jpg) no-repeat center/cover;
+    width: 1200px;
+    height: 900px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.Background::before {
+    position: absolute;
+    content: '';
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    top: 0;
+    left: 0;
+}
+
+.Creator,
+.Preview {
+    position: relative;
+    z-index: 100;
+    width: 50%;
+}
+
+.Preview {
+    align-self: center;
+}
+
+.Card {
+    perspective: 1000px;
+}
+
+.Card:hover .Card-flip {
+    transform: rotateY(180deg);
+}
+
+.Card,
+.Card--front,
+.Card--back {
+    width: 400px;
+    height: 596px;
+}
+
+
+.Card-flip {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+
+.Card--front,
+.Card--back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Card--front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.Card--back {
+    transform: rotateY(180deg);
+}

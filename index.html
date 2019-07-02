@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hearthsone Card Creator</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <main class="Background">
+            <section class="Creator">
+                <form>
+                  <ul>
+                    <li>
+                      <label>Card Name</label>
+                      <input type="text"/>
+                    </li>
+                    <li>
+                      <label>Card Description</label>
+                      <textarea></textarea>
+                    </li>
+                    <li>
+                      <label>Value</label>
+                      <input type="text"/>
+                    </li>
+                    <li>
+                      <label>Attack</label>
+                      <input type="text"/>
+                    </li>
+                    <li>
+                      <label>Health</label>
+                      <input type="text"/>
+                    </li>
+                    <li>
+                      <label>Template</label>
+                      <input type="text"/>
+                    </li>
+                    <li>
+                      <label>Image</label>
+                      <input type="text"/>
+                    </li>
+                    <li>
+                      <label>Card Back</label>
+                      <input type="text"/>
+                    </li>
+                  </ul>
+                </form>
+            </section>
+            <aside class="Preview">
+                <section class="Card">
+                    <div class="Card-flip">
+                        <div class="Card--front">
+                            <img src="./images/card-fronts/default.png"/>
+                        </div>
+                        <img class="Card--back" src="./images/card-backs/default.png"/>
+                    </div>
+                </section>
+            </aside>
+        </main>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
