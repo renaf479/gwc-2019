@@ -3,52 +3,52 @@
     <head>
         <title>Hearthsone Card Creator</title>
         <link rel="stylesheet" href="styles.css"/>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     </head>
     <body>
-        <main class="Background">
-            <section class="Creator">
-                <form>
-                  <ul>
-                    <li>
-                      <label>Card Name</label>
-                      <input type="text"/>
+        <main class="Creator">
+            <section class="Creator-form">
+                <ul>
+                    <li class="CreatorForm-field">
+                        <label class="CreatorFormField-label">Card Name</label>
+                        <input class="CreatorFormField-input" type="text" placeholder="Enter the name of the card"/>
                     </li>
-                    <li>
-                      <label>Card Description</label>
-                      <textarea></textarea>
+                    <li class="CreatorForm-field">
+                        <label class="CreatorFormField-label">Card Description</label>
+                        <textarea class="CreatorFormField-input"></textarea>
                     </li>
-                    <li>
-                      <label>Value</label>
-                      <input type="text"/>
+                    <li class="CreatorForm-field">
+                        <label class="CreatorFormField-label">Value</label>
+                        <input class="CreatorFormField-input" type="text" placeholder=""/>
                     </li>
-                    <li>
-                      <label>Attack</label>
-                      <input type="text"/>
+                    <li class="CreatorForm-field">
+                        <label class="CreatorFormField-label">Attack</label>
+                        <input class="CreatorFormField-input" type="text" placeholder=""/>
                     </li>
-                    <li>
-                      <label>Health</label>
-                      <input type="text"/>
+                    <li class="CreatorForm-field">
+                        <label class="CreatorFormField-label">Health</label>
+                        <input class="CreatorFormField-input" type="text" placeholder=""/>
                     </li>
-                    <li>
-                      <label>Template</label>
-                      <input type="text"/>
+                    <li class="CreatorForm-field">
+                        <label class="CreatorFormField-label">Template</label>
+                        <input class="CreatorFormField-input" type="text" placeholder=""/>
                     </li>
-                    <li>
-                      <label>Image</label>
-                      <input type="text"/>
+                    <li class="CreatorForm-field">
+                        <label class="CreatorFormField-label">Image</label>
+                        <input class="CreatorFormField-input" type="text" placeholder=""/>
                     </li>
-                    <li>
-                      <label>Card Back</label>
-                      <input type="text"/>
+                    <li class="CreatorForm-field">
+                        <label class="CreatorFormField-label">Card Back</label>
+                        <input class="CreatorFormField-input" type="text" placeholder=""/>
                     </li>
-                  </ul>
-                </form>
+                </ul>
             </section>
             <aside class="Preview">
                 <section class="Card">
                     <div class="Card-flip">
                         <div class="Card--front">
-                            <img src="./images/card-fronts/default.png"/>
+                            <img class="CardFront-template" src="./images/card-fronts/default.png"/>
+                            <img class="CardFront-image" src="./images/card-images/a-f-kay.jpg"/>
                         </div>
                         <img class="Card--back" src="./images/card-backs/default.png"/>
                     </div>

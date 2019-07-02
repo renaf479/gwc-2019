@@ -1,16 +1,29 @@
-.Background {
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font: 16px/1.5 Open Sans,Helvetica,Arial,sans-serif;
+    background: #f1d4ab url('./images/bg-creator.jpg') 50%;
+}
+
+.Creator {
     position: relative;
-    background: transparent url(./images/bg.jpg) no-repeat center/cover;
     width: 1200px;
     height: 900px;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.Background::before {
+.Creator::before {
     position: absolute;
     content: '';
-    background-color: #000;
+    background-color: #fff;
     width: 100%;
     height: 100%;
     opacity: .7;
@@ -18,11 +31,38 @@
     left: 0;
 }
 
-.Creator,
+.Creator-form,
 .Preview {
     position: relative;
     z-index: 100;
     width: 50%;
+}
+
+.Creator-form {
+    padding: 0 40px;
+    background: #f1d4ab url('./images/bg-creator.jpg') 50%;
+    border-radius: 5px;
+    margin: 20px 40px;
+    height: 60%;
+    width: 60%;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .3);
+}
+
+.CreatorForm-field {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.CreatorFormField-label {
+    flex: 1 0 100px;
+    max-width: 150px;
+}
+
+.CreatorFormField-input {
+    flex: 1 0 100px;
+    padding: 10px;
 }
 
 .Preview {
@@ -31,6 +71,7 @@
 
 .Card {
     perspective: 1000px;
+    margin: 0 auto;
 }
 
 .Card:hover .Card-flip {
@@ -44,13 +85,11 @@
     height: 596px;
 }
 
-
 .Card-flip {
     position: relative;
     transform-style: preserve-3d;
     transition: .5s;
 }
-
 
 .Card--front,
 .Card--back {
@@ -61,10 +100,30 @@
 }
 
 .Card--front {
+    position: absolute;
     z-index: 2;
     transform: rotateY(0deg);
 }
 
 .Card--back {
     transform: rotateY(180deg);
+}
+
+.CardFront-template,
+.CardFront-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 0);
+}
+
+.CardFront-template {
+    z-index: 2;
+}
+
+.CardFront-image {
+    z-index: 1;
+    width: 60%;
+    top: 30px;
 }
